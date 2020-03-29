@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Dance Academy</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class='header'>    
+        <div class='header-logo'>Dance Academy</div>
+<img class='logo' src='logo.jpg'>
+            <div class='head-list'>
+                <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Styles</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="cab.html">Contemporary and Ballet</a>
+  </div>
+</div>
+            </div>
+      </div>
+      <script type = "text/javascript">
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 3000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "1.jpg";
+          images[1] = "2.jpg";
+          images[2] = "3.jpg";
+	  images[3] = "11.jpg";
+
+      </script>
+
+<body onload = "startTimer()">
+       <img id="img" src="1.jpg">
+<div class='about'>
+        <h2>About Us</h2>
+        <p>Dance Academy is home to all dancers to explore the best in them no matter what their age and experience is. We believe in providing world class dance education which enables our students to become performers of global standards. We are offering training programs which students can customise as per their interests from 20 different dance styles. We strive to offer a positive environment for dancers to grow and have a great learning experience. </p>
+      </div>
+</body>
+  
+      <footer>
+	<h3>Contact us:</h3>
+	<p>Mobile No.: 123456789</p>
+	<p>Or Connect with us on Facebook</p>
+       
+       
+       
+       
+
+</html>
